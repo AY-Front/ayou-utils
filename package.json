@@ -6,6 +6,7 @@
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
+  "homepage": "https://github.com/AY-Front/ayou-utils",
   "scripts": {
     "dev": "father dev",
     "build": "father build",
