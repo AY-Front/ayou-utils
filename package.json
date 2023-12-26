@@ -2,11 +2,24 @@
   "name": "ayou-utils",
   "author": "ayou",
   "version": "1.0.1",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AY-Front/ayou-utils"
+  },
   "description": "for learning purposes only",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
-  "homepage": "https://github.com/AY-Front/ayou-utils",
+  "homepage": "https://github.com/AY-Front/ayou-utils#readme",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/cjs/index.d.ts",
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js"
+    }
+  },
   "scripts": {
     "dev": "father dev",
     "build": "father build",
@@ -15,6 +28,9 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "utils"
   ],
   "license": "ISC",
   "devDependencies": {
