@@ -1,7 +1,7 @@
 {
   "name": "ayou-utils",
   "author": "ayou",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "for learning purposes only",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
