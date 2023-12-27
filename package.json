@@ -15,7 +15,7 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/cjs/index.d.ts",
+      "types": "./dist/index.d.ts",
       "require": "./dist/cjs/index.js",
       "import": "./dist/esm/index.js"
     }
@@ -23,7 +23,10 @@
   "scripts": {
     "dev": "father dev",
     "build": "father build",
+    "prebuild": "npx rimraf ./dist",
+    "postbuild": "node ./scripts/postbuild.js",
     "build:deps": "father prebundle",
+    "bd": "npm run build",
     "prepublishOnly": "father doctor && npm run build"
   },
   "files": [
@@ -34,7 +37,9 @@
   ],
   "license": "ISC",
   "devDependencies": {
-    "father": "^4.3.8"
+    "father": "^4.3.8",
+    "glob": "^10.3.10",
+    "rimraf": "^5.0.5"
   },
   "dependencies": {
     "@babel/runtime": "^7.23.6"
